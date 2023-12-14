@@ -49,6 +49,14 @@
   background-size: cover;
 }
 
+.button-circle:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
 .arrow {
   display: flex;
   justify-content: center;
@@ -77,7 +85,7 @@
   width: 100px;
   height: 100px;
   cursor: pointer;
-  background: transparent url('./images/threat.png') center center no-repeat;
+  background: transparent url('../images/threat.png') center center no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -91,11 +99,22 @@
 }
 
 .big-button-circle:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
 .big-button-circle span {
   font-family: 'blocextcondc-regular', sans-serif;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.icon-button {
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .center {}

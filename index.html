@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
   <link
     href="https://www.dafontfree.net/embed/YmxvY2V4dGNvbmRjLXJlZ3VsYXImZGF0YS81My9iLzE1NzcwMS9QVF9CbG9jX0V4dHJhX0NvbmRlbnNlZF9DeXJpbGxpYy50dGY"
     rel="stylesheet" type="text/css" />
@@ -15,13 +18,19 @@
   <div class="container">
     <div class="bg left">
       <div class="button-circle">
-
+        <div class="arrow">
+          <span><i class="far fa-users"></i></span>
+        </div>
       </div>
       <div class="button-circle">
-        <p></p>
+        <div class="arrow">
+          <span><i class="far fa-volume-up"></i></span>
+        </div>
       </div>
-      <div class="button-circle">
-        <p></p>
+      <div class="button-circle" onclick="toggleMusic()">
+        <div class=" arrow music">
+          <span><i id="volumeIcon" class="far fa-volume-up"></i></span>
+        </div>
       </div>
     </div>
 
@@ -37,19 +46,26 @@
     </div>
 
     <div class="bg right">
-      <div class="button-circle">
+      <div class="button-circle" onclick="changeText('up')">
         <div class="arrow">
-          <span>^</span>
+          <span><i class="fad fa-chevron-up"></i></span>
         </div>
       </div>
-      <div class="big-button-circle">
-        <span>AND</span>
+
+      <div class="big-button-circle" onclick="changePage()">
+        <span id="buttonText">AND</span>
       </div>
-      <div class="button-circle">
-        <p></p>
+
+      <div class="button-circle" onclick="changeText('down')">
+        <div class="arrow">
+          <span><i class="fad fa-chevron-down"></i></span>
+        </div>
       </div>
     </div>
   </div>
+
+
+  <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
