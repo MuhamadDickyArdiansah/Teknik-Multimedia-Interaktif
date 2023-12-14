@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'blocextcondc-regular', sans-serif;
+}
+
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 10vw auto 15vw;
+}
+
+.bg {
+  background-color: aquamarine;
+  border: 1px solid black;
+}
+
+.left,
+.right,
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.button-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.14s e;
+  -webkit-transition: 0.14s e;
+  -moz-transition: 0.14s e;
+  -ms-transition: 0.14s e;
+  -o-transition: 0.14s e;
+  background: url("http://www.species-in-pieces.com/img/textured-ui/green-texture.png") repeat center center/40px 40px;
+  background-size: cover;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: aquamarine;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.arrow span {
+  color: white;
+  font-size: 20px;
+}
+
+
+.big-button-circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background: transparent url('./images/threat.png') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease-in;
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -ms-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+
+}
+
+.big-button-circle:hover {
+  transform: scale(1.2);
+}
+
+.big-button-circle span {
+  font-family: 'blocextcondc-regular', sans-serif;
+}
+
+.center {}
