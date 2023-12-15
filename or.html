@@ -22,11 +22,6 @@
           <span><i class="far fa-users"></i></span>
         </div>
       </div>
-      <div class="button-circle">
-        <div class="arrow">
-          <span><i class="far fa-volume-up"></i></span>
-        </div>
-      </div>
       <div class="button-circle" onclick="toggleMusic()">
         <div class=" arrow music">
           <span><i id="volumeIcon" class="far fa-volume-up"></i></span>
@@ -35,12 +30,24 @@
             Your browser does not support the audio element.
           </audio>
         </div>
-      </div> 
+      </div>
+      <div class="button-circle" onclick="toggleText()">
+        <div class="arrow">
+          <span><i id="toggleIcon" class="fad fa-font"></i></span>
+        </div>
+      </div>
+      <div class="button-circle" onclick="toggleVideo()">
+        <div class="arrow">
+          <span><i id="playIcon" class="fal fa-video"></i></span>
+        </div>
+      </div>     
     </div>
 
     <div class="bg center">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/NqLqEbFUKNk" frameborder="0"
+      <h1>Operator OR</h1>
+      <iframe id="videoFrame" width="560" height="315" src="https://www.youtube.com/embed/NqLqEbFUKNk" frameborder="0"
         allowfullscreen></iframe>
+        <p class="deskripsi">Gerbang OR merupakan gerbang yang memerlukan dua input untuk menghasilkan satu output. Gerbang OR ini akan menghasilkan output 1 jika semua atau salah satu input merupakan bilangan biner 1. Sedangkan output akan menghasilkan 0 jika semua inputnya adalah bilangan biner 0.</p>
       <footer>
         <a href="">IN PIECES</a>
         <a href="">HOW IT'S MADE</a>

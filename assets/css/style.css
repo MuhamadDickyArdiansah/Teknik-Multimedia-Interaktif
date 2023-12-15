@@ -118,3 +118,9 @@
 }
 
 .center {}
+
+.deskripsi {
+  padding-left: 40px; /* Jarak dari kiri */
+  padding-right: 40px; /* Jarak dari kanan */
+  text-align: justify;
+}
