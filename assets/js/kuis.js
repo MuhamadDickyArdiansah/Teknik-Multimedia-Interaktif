@@ -1,21 +1,33 @@
 const quizData = [
   {
-    question: "Jika input A adalah 0, apa hasil operasi NOT A?",
-    options: ["1", "0"],
-    correctAnswer: "1",
+    question: "Persamaan yang tepat untuk representasi dari gambar di samping adalah ?",
+    options: ["A AND B", "A OR B"],
+    correctAnswer: "A AND B",
     image: "assets/images/1.png"
   },
   {
-    question: "Diberikan fungsi logika F = A AND B OR C, apa hasilnya jika A = 1, B = 0, dan C = 0?",
-    options: ["1", "0"],
-    correctAnswer: "0",
+    question: "Menurut anda, termasuk operator apa rangkaian di samping ?",
+    options: ["Operasi AND", "Operasi OR", "NOT"],
+    correctAnswer: "Operasi OR",
     image: "assets/images/2.png"
   },
   {
-    question: "Berapakah 2 pangkat 3?",
-    options: ["6", "8", "10", "16"],
-    correctAnswer: "8",
+    question: "Persamaan yang tepat untuk gambar di samping adalah ?",
+    options: ["A AND B OR C", "A OR C AND B", "B OR C AND A", "Semua benar"],
+    correctAnswer: "A AND B OR C",
     image: "assets/images/3.png"
+  },
+  {
+    question: "lengkapi apa operator yang untuk bagian kosong berikut A OR B ... C?",
+    options: ["NOT", "OR", "AND"],
+    correctAnswer: "AND",
+    image: "assets/images/4.png"
+  },
+  {
+    question: "Apakah rangkaian di samping merupakan operasi OR ?",
+    options: ["Benar", "Salah"],
+    correctAnswer: "Benar",
+    image: "assets/images/5.png"
   }
 ];
 
@@ -23,7 +35,7 @@ let timerTimeout;
 let currentQuestionIndex = 0;
 let timerInterval;
 let timerWidth = 100;
-const timerDuration = 15000; // 5000 milliseconds for 100% width
+const timerDuration = 10000; // Durasi timer untuk setiap soal (misal 10 detik)
 
 const questionElement = document.getElementById("question");
 const optionsContainer = document.getElementById("options");
@@ -45,30 +57,34 @@ function showQuestion() {
 
   titleElement.textContent = `Kuis No ${currentQuestionIndex + 1}`;
 
-  // Set the timer for each question (5 seconds)
+  resetAndStartTimer();
+}
+
+function resetAndStartTimer() {
+  clearInterval(timerInterval);
+  clearTimeout(timerTimeout);
   timerElement.style.width = "100%";
   timerWidth = 100;
   const startTime = Date.now();
-  timerInterval = setInterval(() => {
-    const elapsedTime = Date.now() - startTime;
-    timerWidth = Math.max(0, 100 - (elapsedTime / timerDuration) * 100);
-    timerElement.style.width = timerWidth + "%";
-
-    if (timerWidth <= 0) {
-      // Time is up, move to the next question
-      clearInterval(timerInterval);
-      showPopup(false);
-    }
-  }, 100);
+  timerInterval = setInterval(() => updateTimer(startTime), 100);
 
   timerTimeout = setTimeout(() => {
     clearInterval(timerInterval);
-    showPopup(false);
+    showPopup(false); // Menunjukkan bahwa waktu telah habis
   }, timerDuration);
 }
 
-let correctCount = 0;
-let incorrectCount = 0;
+function updateTimer(startTime) {
+  const elapsedTime = Date.now() - startTime;
+  timerWidth = Math.max(0, 100 - (elapsedTime / timerDuration) * 100);
+  timerElement.style.width = `${timerWidth}%`;
+
+  if (timerWidth <= 0) {
+    clearInterval(timerInterval);
+    clearTimeout(timerTimeout);
+    showPopup(false); // Menunjukkan bahwa waktu telah habis
+  }
+}
 
 function showPopup(isCorrect) {
   if (isCorrect) {
@@ -84,7 +100,8 @@ function showPopup(isCorrect) {
     confirmButtonText: 'Ok'
   }).then(() => {
     if (currentQuestionIndex < quizData.length - 1) {
-      nextQuestion();
+      currentQuestionIndex++;
+      showQuestion();
     } else {
       goToIndex();
     }
@@ -94,6 +111,8 @@ function showPopup(isCorrect) {
 function checkAnswer(selectedOption) {
   const currentQuestion = quizData[currentQuestionIndex];
   const isCorrect = selectedOption === currentQuestion.correctAnswer;
+  clearInterval(timerInterval);
+  clearTimeout(timerTimeout);
   showPopup(isCorrect);
 }
 
@@ -104,42 +123,22 @@ function nextQuestion() {
   if (currentQuestionIndex < quizData.length) {
     showQuestion();
   } else {
-    showPopup(true);
-    resetQuiz();
+    showResults();
   }
 }
 
-// function previousQuestion() {
-//   clearInterval(timerInterval);
-//   clearTimeout(timerTimeout);
-//   if (currentQuestionIndex > 0) {
-//     currentQuestionIndex--;
-//     showQuestion();
-//   }
-// }
-
 function resetQuiz() {
   currentQuestionIndex = 0;
-  timerWidth = 100;
+  correctCount = 0;
+  incorrectCount = 0;
   showQuestion();
-}
-
-function updateResults() {
-  document.getElementById('correctCount').textContent = correctCount;
-  document.getElementById('incorrectCount').textContent = incorrectCount;
 }
 
 function goToIndex() {
   clearInterval(timerInterval);
   clearTimeout(timerTimeout);
   window.location.href = `results.html?correctCount=${correctCount}&incorrectCount=${incorrectCount}`;
-
 }
-
-function goToHome() {
-  window.location.href = 'index.html';
-}
-
 
 document.addEventListener('DOMContentLoaded', function () {
   resetQuiz();

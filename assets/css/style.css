@@ -24,7 +24,7 @@ a::after {
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: 10vw auto 15vw;
+  grid-template-columns: 7vw auto 10vw;
 }
 
 .bg {
@@ -179,6 +179,15 @@ footer {
   color: aliceblue;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.video img {
+  margin-left: 2rem;
+  width: 300px;
+}
+=======
+>>>>>>> 45598e92bb0723ab440778913972b91819b02573
 .video-container {
   display: flex;
   justify-content: space-between;
@@ -190,6 +199,7 @@ footer {
   width: 300px; /* Lebar video */
   height: auto; /* Ketinggian video menyesuaikan proporsi */
 }
+<<<<<<< HEAD
 
 .video-left {
   flex: 1;
@@ -204,4 +214,65 @@ footer {
 .video-right {
   flex: 1;
   margin-left: 10px;
+}
+
+img { 
+  z-index: 2;
+}
+
+.shadow {
+  position: absolute;
+  height: 600px;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.creator:hover:after {
+  content: " - Link content";
+}
+
+.sound:hover:after {
+  content: " - Paragraph content";
+}
+
+.video-on:hover:after {
+  content: " - Video On";
+}
+
+.video-off:hover:after {
+  content: " - Video Off";
+}
+
+
+
+.creator, .sound {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.creator:hover:after ,.sound:hover:after, .video-on:hover:after, .video-off:hover:after {
+  position: absolute;
+  width: max-content;
+  left: 4rem;
+  background-image: url("../images/popout-mid.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10px;
+  border-radius: 12px;
+  opacity: 1; /* Set opacity to 1 */
+  animation: animate 0.14s ease-in;
+}
+
+@keyframes animate {
+  0% {
+      opacity: 0;
+      transform: translateX(-8px);
+  }
+
+  100% {
+      opacity: 1; /* Keep opacity at 1 */
+      transform: translateX(0px);
+  }
 }

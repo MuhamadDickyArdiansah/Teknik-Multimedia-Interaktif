@@ -12,55 +12,40 @@
     href="https://www.dafontfree.net/embed/YmxvY2V4dGNvbmRjLXJlZ3VsYXImZGF0YS81My9iLzE1NzcwMS9QVF9CbG9jX0V4dHJhX0NvbmRlbnNlZF9DeXJpbGxpYy50dGY"
     rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="assets/css/style.css">
-</head>
 
 <body>
   <div class="container">
     <div class="bg left">
-      <div class="button-circle">
+      <div class="button-circle video-on" onclick="startVideos()">
         <div class="arrow">
-          <span><i class="far fa-users"></i></span>
+          <span><i class="fad fa-user"></i></span>
         </div>
       </div>
-      <div class="button-circle" onclick="toggleMusic()">
-        <div class=" arrow music">
-          <span><i id="volumeIcon" class="far fa-volume-up"></i></span>
-          <audio id="myAudio">
-            <source src="assets/sound/music.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-      </div>
-      <div class="button-circle" onclick="toggleText()">
+      <div class="button-circle video-off" onclick="stopVideos()">
         <div class="arrow">
-          <span><i id="toggleIcon" class="fad fa-font"></i></span>
+          <span><i class="fad fa-user"></i></span>
         </div>
       </div>
-      <div class="button-circle" onclick="toggleVideo()">
-        <div class="arrow">
-          <span><i id="playIcon" class="fal fa-video"></i></span>
-        </div>
-      </div>
+
     </div>
 
     <div class="bg center">
-        <div class="video-container bg">    
-            <video video muted autoplay>
-              
-                <source src="assets/video/dicky.MOV" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              
-              <video video muted autoplay>
-                <source src="assets/video/tegar.MOV" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              
-              <video video muted autoplay>
-                <source src="assets/video/isal.MOV" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-        </div>
+      <div class="video-container bg">
+        <video video muted autoplay>
+          <source src="assets/video/dicky.MOV" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <video video muted autoplay>
+          <source src="assets/video/tegar.MOV" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <video video muted autoplay>
+          <source src="assets/video/isal.MOV" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
 
     <div class="bg right">
