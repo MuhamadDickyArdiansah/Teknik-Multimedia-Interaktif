@@ -175,3 +175,15 @@ footer {
   text-align: justify;
   color: aliceblue;
 }
+
+.video-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Sesuaikan tinggi container video */
+}
+
+.video-container video {
+  width: 300px; /* Lebar video */
+  height: auto; /* Ketinggian video menyesuaikan proporsi */
+}
