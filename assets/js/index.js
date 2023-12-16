@@ -11,7 +11,7 @@ function toggleMusic() {
 }
 
 var buttonTextElement = document.getElementById("buttonText");
-  var buttonOptions = ["OR", "AND", "XOR", "NOT", "NOR", "NAND", "XNOR"];
+  var buttonOptions = ["OR", "AND", "NOT"];
   var currentIndex = 1; // Index of the current button text
 
   function changeText(direction) {
@@ -68,7 +68,6 @@ var buttonTextElement = document.getElementById("buttonText");
       // Hide text mode, change icon to 'show text'
       toggleIcon.classList.remove("fas", "fa-eye-slash");
       toggleIcon.classList.add("fad", "fa-font");
-      // Lakukan tindakan lainnya saat teks disembunyikan
       // Misalnya, sembunyikan teks yang sebelumnya ditampilkan
     }
   }

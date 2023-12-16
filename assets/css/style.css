@@ -13,8 +13,7 @@
 }
 
 .bg {
-  background-color: aquamarine;
-  border: 1px solid black;
+  background-color: #1a1a1d;
 }
 
 .left,
@@ -63,7 +62,7 @@
   align-items: center;
   width: 40px;
   height: 40px;
-  background: aquamarine;
+  background: #1a1a1d;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -117,10 +116,39 @@
   font-weight: bold;
 }
 
-.center {}
+#buttonText {
+  font-weight: bold;
+}
+
+.center .header {
+  position: fixed;
+  top: 0;
+  color: aliceblue;
+  margin-top: 2rem;
+}
+
+
+
+.center .footer {
+  bottom: 0;
+}
+
+.footer-top {
+  text-align: center;
+  color: #fff;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .deskripsi {
-  padding-left: 40px; /* Jarak dari kiri */
-  padding-right: 40px; /* Jarak dari kanan */
+  padding-left: 40px;
+  /* Jarak dari kiri */
+  padding-right: 40px;
+  /* Jarak dari kanan */
   text-align: justify;
+  color: aliceblue;
 }
