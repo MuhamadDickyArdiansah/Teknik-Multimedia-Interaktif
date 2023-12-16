@@ -9,6 +9,8 @@
 a {
   position: relative;
   letter-spacing: .2em;
+  color: #fff;
+  text-decoration: none;
 }
 
 a::after {
@@ -146,6 +148,8 @@ footer {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
+  position: absolute;
+  bottom: 2.5rem;
 }
 
 .center .footer {
