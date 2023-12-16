@@ -176,7 +176,21 @@ footer {
   color: aliceblue;
 }
 
+<<<<<<< HEAD
 .video img {
   margin-left: 2rem;
   width: 300px;
 }
+=======
+.video-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Sesuaikan tinggi container video */
+}
+
+.video-container video {
+  width: 300px; /* Lebar video */
+  height: auto; /* Ketinggian video menyesuaikan proporsi */
+}
+>>>>>>> e03f0c8dcc9081b674f7ee6fcc059563e3bf3a16
