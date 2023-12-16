@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('correctCount').textContent = correctCount || 0;
   document.getElementById('incorrectCount').textContent = incorrectCount || 0;
 
-  function goToIndex(){
-    window.location.href = 'index.html';
-  }
 });
+
+function goToIndex(){
+  window.location.href = 'index.html';
+}

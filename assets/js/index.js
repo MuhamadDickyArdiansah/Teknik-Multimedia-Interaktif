@@ -91,3 +91,7 @@ var buttonTextElement = document.getElementById("buttonText");
   
   
 
+
+  function goToProfile(){
+    window.location.href='profile.html'
+  }

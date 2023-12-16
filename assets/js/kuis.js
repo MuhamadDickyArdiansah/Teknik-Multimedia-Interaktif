@@ -23,7 +23,7 @@ let timerTimeout;
 let currentQuestionIndex = 0;
 let timerInterval;
 let timerWidth = 100;
-const timerDuration = 5000; // 5000 milliseconds for 100% width
+const timerDuration = 15000; // 5000 milliseconds for 100% width
 
 const questionElement = document.getElementById("question");
 const optionsContainer = document.getElementById("options");
@@ -109,14 +109,14 @@ function nextQuestion() {
   }
 }
 
-function previousQuestion() {
-  clearInterval(timerInterval);
-  clearTimeout(timerTimeout);
-  if (currentQuestionIndex > 0) {
-    currentQuestionIndex--;
-    showQuestion();
-  }
-}
+// function previousQuestion() {
+//   clearInterval(timerInterval);
+//   clearTimeout(timerTimeout);
+//   if (currentQuestionIndex > 0) {
+//     currentQuestionIndex--;
+//     showQuestion();
+//   }
+// }
 
 function resetQuiz() {
   currentQuestionIndex = 0;
@@ -134,6 +134,10 @@ function goToIndex() {
   clearTimeout(timerTimeout);
   window.location.href = `results.html?correctCount=${correctCount}&incorrectCount=${incorrectCount}`;
 
+}
+
+function goToHome() {
+  window.location.href = 'index.html';
 }
 
 

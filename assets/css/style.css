@@ -90,6 +90,9 @@ a::after {
   font-size: 20px;
 }
 
+.video img {
+  width: 400px;
+}
 
 .big-button-circle {
   -webkit-border-radius: 50%;
@@ -174,4 +177,31 @@ footer {
   /* Jarak dari kanan */
   text-align: justify;
   color: aliceblue;
+}
+
+.video-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Sesuaikan tinggi container video */
+}
+
+.video-container video {
+  width: 300px; /* Lebar video */
+  height: auto; /* Ketinggian video menyesuaikan proporsi */
+}
+
+.video-left {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.video-center {
+  flex: 1;
+  margin: 0 10px; /* Jarak kanan dan kiri */
+}
+
+.video-right {
+  flex: 1;
+  margin-left: 10px;
 }
