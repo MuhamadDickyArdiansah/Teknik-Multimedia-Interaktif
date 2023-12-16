@@ -22,11 +22,6 @@
           <span><i class="far fa-users"></i></span>
         </div>
       </div>
-      <div class="button-circle">
-        <div class="arrow">
-          <span><i class="far fa-volume-up"></i></span>
-        </div>
-      </div>
       <div class="button-circle" onclick="toggleMusic()">
         <div class=" arrow music">
           <span><i id="volumeIcon" class="far fa-volume-up"></i></span>
@@ -36,17 +31,46 @@
           </audio>
         </div>
       </div>
+      <div class="button-circle" onclick="toggleText()">
+        <div class="arrow">
+          <span><i id="toggleIcon" class="fad fa-font"></i></span>
+        </div>
+      </div>
+      <div class="button-circle" onclick="toggleVideo()">
+        <div class="arrow">
+          <span><i id="playIcon" class="fal fa-video"></i></span>
+        </div>
+      </div>
     </div>
 
     <div class="bg center">
-      <iframe width="720" height="420" src="https://www.youtube.com/embed/NqLqEbFUKNk" frameborder="0"
-        allowfullscreen></iframe>
+
+      <div class="center-content">
+        <div class="video">
+          <!-- <iframe id="videoFrame" width="560" height="315" src="https://www.youtube.com/embed/NqLqEbFUKNk" frameborder="0"
+          allowfullscreen></iframe> -->
+          <img src="assets/images/or.png" alt="">
+        </div>
+        <div class="c-deskripsi">
+          <p id="teksFrame" class="deskripsi">Gerbang OR merupakan gerbang yang memerlukan dua input untuk menghasilkan
+            satu output. Gerbang OR ini akan menghasilkan output 1 jika semua atau salah satu input merupakan bilangan
+            biner 1. Sedangkan output akan menghasilkan 0 jika semua inputnya adalah bilangan biner 0.</p>
+
+        </div>
+
+      </div>
 
       <footer>
-        <a href="kuis1.html">KUIS</a>
-        <a href="">HOW IT'S MADE</a>
-        <a href="">COUSES & SOURCES</a>
-        <a href="">KELOMPOK 6</a>
+        <div class="footer-top">
+          <h2>Logika OR</h2>
+        </div>
+        <div>
+          <a href="">IN PIECES</a>
+          <a href="">HOW IT'S MADE</a>
+          <a href="">COUSES & SOURCES</a>
+          <button>Kelompok 6</button>
+        </div>
+
       </footer>
     </div>
 
